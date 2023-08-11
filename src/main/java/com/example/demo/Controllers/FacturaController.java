@@ -1,6 +1,10 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Domain.Factura;
+import com.example.demo.Responses.Factory.FacturaResponseFactory;
+import com.example.demo.Responses.FacturaResponse;
+import com.example.demo.Responses.Response;
+import com.example.demo.Responses.ResponseType;
 import com.example.demo.Service.FacturaService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +27,8 @@ public class FacturaController {
     }
 
     @GetMapping("/{id}")
-    public Factura getFactura(@PathVariable String id) {
+    public Response getFactura(@PathVariable String id) {
+
         return facturaService.getFactura(id);
     }
 

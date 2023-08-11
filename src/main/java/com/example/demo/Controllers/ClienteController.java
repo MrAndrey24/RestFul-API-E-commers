@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Domain.Cliente;
+import com.example.demo.Responses.Response;
 import com.example.demo.Service.ClienteService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public Cliente getCliente(@PathVariable String id) {
+    public Response getCliente(@PathVariable String id) {
         return clienteService.getCliente(id);
     }
 
