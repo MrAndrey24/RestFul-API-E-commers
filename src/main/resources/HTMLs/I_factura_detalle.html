@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Factura Detalle</title>
+    <link rel="stylesheet" href="../CSSs/I_factura_detalle.css">
+</head>
+<body>
+<div class="formulario">
+    <h2>Registro de Detalle de Factura</h2>
+    <form>
+        <div class="campo">
+            <label for="factura_detalle_id">Código de Detalle:</label>
+            <input type="number" id="factura_detalle_id" name="factura_detalle_id" required>
+        </div>
+        <div class="campo">
+            <label for="factura_id">Código de Factura:</label>
+            <input type="number" id="factura_id" name="factura_id" required>
+        </div>
+        <div class="campo">
+            <label for="id_producto">Código de Producto:</label>
+            <input type="number" id="id_producto" name="id_producto" required>
+        </div>
+        <div class="campo">
+            <label for="Cantidad">Cantidad:</label>
+            <input type="number" id="Cantidad" name="Cantidad" required>
+        </div>
+        <div class="campo">
+            <label for="Precio">Precio:</label>
+            <input type="number" id="Precio" name="Precio" step="0.01" required>
+        </div>
+        <div class="campo">
+            <label for="precio_total">Precio Total:</label>
+            <input type="number" id="precio_total" name="precio_total" step="0.01" required>
+        </div>
+        <div class="campo">
+            <label for="descuento_id">Código de Descuento:</label>
+            <input type="number" id="descuento_id" name="descuento_id" required>
+        </div>
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+</body>
+</html>

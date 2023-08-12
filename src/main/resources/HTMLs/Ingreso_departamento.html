@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Departamento</title>
+    <link rel="stylesheet" href="../CSSs/Ingreso_departamento.css">
+</head>
+<body>
+<div class="formulario">
+    <h2>Registro de Departamento</h2>
+    <form>
+        <div class="campo">
+            <label for="Departamento_id">Código de Departamento:</label>
+            <input type="number" id="Departamento_id" name="Departamento_id" required>
+        </div>
+        <div class="campo">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" maxlength="10" required>
+        </div>
+        <div class="campo">
+            <label for="Stock_id">Código de Stock:</label>
+            <input type="number" id="Stock_id" name="Stock_id" required>
+        </div>
+        <div class="campo">
+            <label for="Categoria_id">Código de Categoría:</label>
+            <input type="number" id="Categoria_id" name="Categoria_id" required>
+        </div>
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+</body>
+</html>

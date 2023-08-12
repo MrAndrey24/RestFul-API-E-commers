@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="../CSSs/Ingreso_producto.css">
+</head>
+<body>
+<div class="formulario">
+    <h2>Registro de Producto</h2>
+    <form>
+        <div class="campo">
+            <label for="Producto_id">Código de Producto:</label>
+            <input type="number" id="Producto_id" name="Producto_id" required>
+        </div>
+        <div class="campo">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" maxlength="50" required>
+        </div>
+        <div class="campo">
+            <label for="Precio">Precio:</label>
+            <input type="number" id="Precio" name="Precio" step="0.01" required>
+        </div>
+        <div class="campo">
+            <label for="Departamento_id">Código de Departamento:</label>
+            <input type="number" id="Departamento_id" name="Departamento_id" required>
+        </div>
+        <div class="campo">
+            <label for="Expiracion">Expiración:</label>
+            <input type="number" id="Expiracion" name="Expiracion" required>
+        </div>
+        <div class="campo">
+            <label for="SKU">SKU:</label>
+            <input type="number" id="SKU" name="SKU" required>
+        </div>
+        <div class="campo">
+            <label for="Proveedor_id">Código de Proveedor:</label>
+            <input type="number" id="Proveedor_id" name="Proveedor_id" required>
+        </div>
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+</body>
+</html>
