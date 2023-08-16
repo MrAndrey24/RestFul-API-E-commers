@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Cliente</title>
     <link rel="stylesheet" href="../CSSs/Ingreso_cliente.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="formulario">
@@ -34,7 +35,10 @@
             <label for="correo_electronico">Correo Electrónico:</label>
             <input type="email" id="correo_electronico" name="correo_electronico" required>
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar" id="registrar_cliente">
+
+        <script src="../js/design_patterns.js"></script>
+        <script src="../js/ingreso_cliente.js"></script>
     </form>
 </div>
 </body>

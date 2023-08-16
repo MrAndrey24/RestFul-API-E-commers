@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Factura</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="../CSSs/Ingreso_factura.css">
 </head>
 <body>
 <div class="formulario">
     <h2>Registro de Factura</h2>
-    <form>
+    <form onsubmit="return false"   >
         <div class="campo">
             <label for="factura_id">Código de Factura:</label>
             <input type="number" id="factura_id" name="factura_id" required>
@@ -26,7 +28,9 @@
             <label for="metodo_pago_id">Código de Método de Pago:</label>
             <input type="number" id="metodo_pago_id" name="metodo_pago_id" required>
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar" id="registrar_factura">
+        <script src="../js/design_patterns.js"></script>
+        <script src="../js/ingreso_factura.js"></script>
     </form>
 </div>
 </body>

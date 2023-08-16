@@ -3,6 +3,7 @@ package com.example.demo.Service;
 import com.example.demo.Domain.Cliente;
 import com.example.demo.Domain.Factura;
 import com.example.demo.Repositories.ClienteRepository;
+import com.example.demo.Responses.Factory.ClienteResponseFactory;
 import com.example.demo.Responses.Factory.FacturaResponseFactory;
 import com.example.demo.Responses.Factory.ResponseFactory;
 import com.example.demo.Responses.Factory.StockResponseFactory;
@@ -27,16 +28,16 @@ public class ClienteService {
 
         Cliente cliente = clienteRepository.findById(id).orElse(null);
         if (cliente == null) {
-            FacturaResponseFactory facturaResponseFactory = new FacturaResponseFactory();
+            ClienteResponseFactory clienteResponseFactory = new ClienteResponseFactory();
 
             return
-                    facturaResponseFactory.getResponse(ResponseType.ERROR, "No se encontró la factura", null);
+                    clienteResponseFactory.getResponse(ResponseType.ERROR, "No se encontró el cliente", null);
         }
 
         else {
-            ResponseFactory stockResponseFactory = new StockResponseFactory();
+            ResponseFactory clienteResponseFactory = new ClienteResponseFactory();
 
-            return stockResponseFactory.getResponse(ResponseType.OK, "Stock encontrado", cliente);
+            return clienteResponseFactory.getResponse(ResponseType.OK, "Cliente encontrado", cliente);
         }
     }
 

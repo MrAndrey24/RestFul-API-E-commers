@@ -34,9 +34,9 @@ public class FacturaService {
         }
 
         else {
-            ResponseFactory stockResponseFactory = new StockResponseFactory();
+            ResponseFactory facturaResponseFactory = new StockResponseFactory();
 
-            return stockResponseFactory.getResponse(ResponseType.OK, "Stock encontrado", factura);
+            return facturaResponseFactory.getResponse(ResponseType.OK, "Stock encontrado", factura);
         }
 
     }

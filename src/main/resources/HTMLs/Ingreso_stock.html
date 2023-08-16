@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Stock</title>
     <link rel="stylesheet" href="../CSSs/Ingreso_stock.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-<div class="formulario">
+<div class="formulario" onsubmit="return false">
     <h2>Registro de Stock</h2>
     <form>
         <div class="campo">
@@ -26,8 +27,10 @@
             <label for="ubicacion_id">Código de Ubicación:</label>
             <input type="number" id="ubicacion_id" name="ubicacion_id" required>
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar" id="registrar_stock">
     </form>
+    <script src="../js/design_patterns.js"></script>
+    <script src="../js/ingreso_stock.js"></script>
 </div>
 </body>
 </html>

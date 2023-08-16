@@ -30,9 +30,9 @@ public class StockService {
         Stock stock = stockRepository.findById(id).orElse(null);
 
         if (stock == null) {
-            ResponseFactory facturaResponseFactory = new FacturaResponseFactory();
+            ResponseFactory stockResponseFactory = new StockResponseFactory();
 
-            return facturaResponseFactory.getResponse(ResponseType.ERROR, "No se encontró el stock", null);
+            return stockResponseFactory.getResponse(ResponseType.ERROR, "No se encontró el stock", null);
 
         }
 
