@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Cliente</title>
-    <link rel="stylesheet" href="../CSSs/Ingreso_cliente.css">
+    <title>Formulario de Empleado</title>
+    <link rel="stylesheet" href="Ingreso_empleado.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="formulario">
-    <h2>Registro de Cliente</h2>
-    <form>
+    <h2>Registro de Empleado</h2>
+    <form onsubmit="return false">
         <div class="campo">
-            <label for="cliente_id">Código de Cliente:</label>
-            <input type="number" id="cliente_id" name="cliente_id" required>
+            <label for="Empleado_id">Código de Empleado:</label>
+            <input type="number" id="Empleado_id" name="Empleado_id" required>
         </div>
         <div class="campo">
             <label for="Nombre">Nombre:</label>
@@ -28,17 +28,17 @@
             <input type="text" id="Direccion" name="Direccion" maxlength="10" required>
         </div>
         <div class="campo">
-            <label for="Telefono">Teléfono:</label>
-            <input type="tel" id="Telefono" name="Telefono" pattern="[0-9]{10}" required>
+            <label for="Departamento_supervisor">Código de Departamento Supervisor:</label>
+            <input type="number" id="Departamento_supervisor" name="Departamento_supervisor" required>
         </div>
         <div class="campo">
-            <label for="correo_electronico">Correo Electrónico:</label>
-            <input type="email" id="correo_electronico" name="correo_electronico" required>
+            <label for="Supervisor_id">Código de Supervisor:</label>
+            <input type="number" id="Supervisor_id" name="Supervisor_id" required>
         </div>
-        <input type="submit" value="Registrar" id="registrar_cliente">
+        <input type="submit" value="Registrar" id="registrar_empleado">
 
-        <script src="../js/design_patterns.js"></script>
-        <script src="../js/ingreso_cliente.js"></script>
+        <script src="design_patterns.js"></script>
+        <script src="ingreso_empleado.js"></script>
     </form>
 </div>
 </body>
