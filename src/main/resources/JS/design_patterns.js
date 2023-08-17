@@ -47,6 +47,39 @@ class ClienteAjax extends AjaxTemplateMethods {
     }
 }
 
+class StockAjax extends AjaxTemplateMethods {
+    constructor() {
+        super("http://localhost:8081/api/v1/stocks");
+    }
+
+    async postToTable(data) {
+
+        super.postToTable("", data);
+    }
+}
+
+class ProductoAjax extends AjaxTemplateMethods {
+    constructor() {
+        super("http://localhost:8081/api/v1/productos");
+    }
+
+    async postToTable(data) {
+
+        super.postToTable("", data);
+    }
+}
+
+class MetodoPagoAjax extends AjaxTemplateMethods {
+    constructor() {
+        super("http://localhost:8081/api/v1/metodos_pago");
+    }
+
+    async postToTable(data) {
+
+        super.postToTable("", data);
+    }
+}
+
 class FacturaAjax extends AjaxTemplateMethods {
     constructor() {
         super("http://localhost:8081/api/v1/factura");
@@ -58,13 +91,39 @@ class FacturaAjax extends AjaxTemplateMethods {
     }
 }
 
-class StockAjax extends AjaxTemplateMethods {
+class TiendaAjax extends AjaxTemplateMethods {
     constructor() {
-        super("http://localhost:8081/api/v1/stocks");
+        super("http://localhost:8081/api/v1/tiendas");
     }
 
     async postToTable(data) {
 
         super.postToTable("", data);
+    }
+}
+
+
+
+class Form {
+    constructor() {
+
+    }
+
+    getData() {
+        throw new Error("You have to implement the method getData!");
+    }
+}
+
+class ClienteForm extends Form {
+    constructor() {
+        super();
+    }
+
+    getData() {
+        return {
+            "nombre": $("#nombre").val(),
+            "apellido": $("#apellido").val(),
+            "telefono": $("#telefono").val()
+        }
     }
 }

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $("#registrar_cliente").on("click", function () {
+    $("#registrar_empleado").on("click", function () {
 
         let cliente_id = $("#cliente_d").val();
         let Nombre = $("#Nombre").val();

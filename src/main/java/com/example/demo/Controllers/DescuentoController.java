@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Domain.Descuento;
+import com.example.demo.Responses.Response;
 import com.example.demo.Service.DescuentoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class DescuentoController {
     }
 
     @GetMapping("/{id}")
-    public Descuento getDescuento(String id){
+    public Response getDescuento(String id){
         return service.getDescuento(id);
     }
 

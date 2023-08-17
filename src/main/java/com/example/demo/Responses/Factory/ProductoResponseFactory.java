@@ -1,12 +1,13 @@
 package com.example.demo.Responses.Factory;
 
 import com.example.demo.Domain.Factura;
+import com.example.demo.Domain.Producto;
 import com.example.demo.Responses.*;
 
-public class FacturaResponseFactory extends ResponseFactory<Factura> {
+public class ProductoResponseFactory extends ResponseFactory<Producto> {
 
     @Override
-    public Response getResponse(ResponseType responseType, String message, Factura data) {
+    public Response getResponse(ResponseType responseType, String message, Producto data) {
 
         switch (responseType) {
             case OK:
@@ -20,12 +21,12 @@ public class FacturaResponseFactory extends ResponseFactory<Factura> {
 
                 message = getStatusMessage(responseType, message);
 
-                return new FacturaResponse(responseType, message, null);
+                return new ProductoResponse(responseType, message, null);
         }
 
         message = getStatusMessage(responseType, message);
 
-        return new FacturaResponse(responseType, message, (Factura) data);
+        return new ProductoResponse(responseType, message, (Producto) data);
 
     }
 }

@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Domain.Producto;
+import com.example.demo.Responses.Response;
 import com.example.demo.Service.ProductoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class ProductoController {
     }
 
     @GetMapping("/{id}")
-    public Producto getProducto(@PathVariable String id){
+    public Response getProducto(@PathVariable String id){
         return service.getProducto(id);
     }
 

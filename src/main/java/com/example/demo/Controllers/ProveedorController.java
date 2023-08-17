@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Domain.Proveedor;
+import com.example.demo.Responses.Response;
 import com.example.demo.Service.ProveedorService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class ProveedorController {
     }
 
     @GetMapping("/{id}")
-    public Proveedor getProveedor(String id){
+    public Response getProveedor(String id){
         return service.getProveedor(id);
     }
 

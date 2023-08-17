@@ -2,6 +2,10 @@ package com.example.demo.Service;
 
 import com.example.demo.Domain.Proveedor;
 import com.example.demo.Repositories.ProveedorRepository;
+import com.example.demo.Responses.Factory.ProveedorResponseFactory;
+import com.example.demo.Responses.Factory.ResponseFactory;
+import com.example.demo.Responses.Response;
+import com.example.demo.Responses.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +20,17 @@ public class ProveedorService {
         return repo.findAll();
     }
 
-    public Proveedor getProveedor(String id){
-        return repo.findById(id).orElse(null);
+    public Response getProveedor(String id){
+        Proveedor proveedor = repo.findById(id).orElse(null);
+        if (proveedor == null) {
+            ProveedorResponseFactory proveedorResponseFactory = new ProveedorResponseFactory();
+
+            return proveedorResponseFactory.getResponse(ResponseType.ERROR, "No se encontró el proveedor", null);
+        } else {
+            ResponseFactory responseFactory = new ProveedorResponseFactory();
+
+            return responseFactory.getResponse(ResponseType.OK, "Proveedor no encontrado", proveedor);
+        }
     }
 
     public Proveedor addProveedor(Proveedor proveedor){

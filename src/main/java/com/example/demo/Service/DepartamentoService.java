@@ -1,7 +1,14 @@
 package com.example.demo.Service;
 
+import com.example.demo.Domain.Cliente;
 import com.example.demo.Domain.Departamento;
 import com.example.demo.Repositories.DepartamentoRepository;
+import com.example.demo.Responses.Factory.ClienteResponseFactory;
+import com.example.demo.Responses.Factory.DepartamentoResponseFactory;
+import com.example.demo.Responses.Factory.DescuentoResponseFactory;
+import com.example.demo.Responses.Factory.ResponseFactory;
+import com.example.demo.Responses.Response;
+import com.example.demo.Responses.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +23,20 @@ public class DepartamentoService {
         return repo.findAll();
     }
 
-    public Departamento getDepartamento(String id){
-        return repo.findById(id).orElse(null);
+    public Response getDepartamento(String id){
+        Departamento departamento = repo.findById(id).orElse(null);
+        if (departamento == null) {
+            DepartamentoResponseFactory descuentoResponseFactory = new DepartamentoResponseFactory();
+
+            return
+                    descuentoResponseFactory.getResponse(ResponseType.ERROR, "No se encontró el cliente", null);
+        }
+
+        else {
+            ResponseFactory responseFactory = new DepartamentoResponseFactory();
+
+            return responseFactory.getResponse(ResponseType.OK, "Departamento no encontrado", departamento);
+        }
     }
 
     public Departamento addDepartamento(Departamento departamento){
