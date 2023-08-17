@@ -102,28 +102,24 @@ class TiendaAjax extends AjaxTemplateMethods {
     }
 }
 
-
-
-class Form {
+class EmpleadoAjax extends AjaxTemplateMethods {
     constructor() {
-
+        super("http://localhost:8081/api/v1/empleados");
     }
 
-    getData() {
-        throw new Error("You have to implement the method getData!");
+    async postToTable(data) {
+
+        super.postToTable("", data);
     }
 }
 
-class ClienteForm extends Form {
+class ProveedorAjax extends AjaxTemplateMethods {
     constructor() {
-        super();
+        super("http://localhost:8081/api/v1/proveedores");
     }
 
-    getData() {
-        return {
-            "nombre": $("#nombre").val(),
-            "apellido": $("#apellido").val(),
-            "telefono": $("#telefono").val()
-        }
+    async postToTable(data) {
+
+        super.postToTable("", data);
     }
 }

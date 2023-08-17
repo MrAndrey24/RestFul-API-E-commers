@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Proveedor</title>
     <link rel="stylesheet" href="../CSSs/Ingreso_proveedor.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="formulario">
     <h2>Registro de Proveedor</h2>
-    <form>
+    <form onsubmit="return false">
         <div class="campo">
             <label for="proveedor_id">Código de Proveedor:</label>
             <input type="number" id="proveedor_id" name="proveedor_id" required>
@@ -19,15 +20,18 @@
             <input type="text" id="Nombre" name="Nombre" maxlength="40" required>
         </div>
         <div class="campo">
-            <label for="cédula_jurídica">Cédula Jurídica:</label>
-            <input type="number" id="cédula_jurídica" name="cédula_jurídica" required>
+            <label for="cedula_juridica">Cédula Jurídica:</label>
+            <input type="number" id="cedula_juridica" name="cédula_jurídica" required>
         </div>
         <div class="campo">
-            <label for="Dirección">Dirección:</label>
-            <input type="text" id="Dirección" name="Dirección" maxlength="50" required>
+            <label for="Direccion">Dirección:</label>
+            <input type="text" id="Direccion" name="Direccion" maxlength="50" required>
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar" id="registrar_proveedor">
     </form>
+
+    <script src="../js/design_patterns.js"></script>
+    <script src="../js/ingreso_proveedor.js"></script>
 </div>
 </body>
 </html>
